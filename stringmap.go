@@ -4,7 +4,6 @@ import (
 	"strings"
 	"bytes"
 	"sort"
-	"fmt"
 )
 
 type StringMap map[string]string
@@ -43,7 +42,6 @@ func (sm *StringMap) Slice() []string {
 
 // Return a comma-separated string that represents the StringMap
 func (sm *StringMap) String() string {
-	fmt.Println("SM:", *sm)
 	var buffer bytes.Buffer
 	for _, value := range (*sm).Slice() {
 		buffer.WriteString(value + ", ")
